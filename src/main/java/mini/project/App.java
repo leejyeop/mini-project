@@ -4,16 +4,15 @@
 package mini.project;
 
 public class App {
-	public String getGreeting() {
-		return "Hello world 가나다라마바사222.123";
-	}
+  public String getGreeting() {
+    return "Hello world 가나다라마바사222.123";
+  }
 
-	public static void main(String[] args) {
-		System.out.println("미니프로젝트 연습");
-		System.out.println("미니 연습");
-		System.out.println();//er
-		//다시
-		System.out.println("테스트.12:55");
+  public static void main(String[] args) {
+    System.out.println("미니프로젝트 연습");
+    System.out.println("미니 연습");
+    //다시
+    System.out.println("테스트.12:55");
 
-	}
+  }
 }
