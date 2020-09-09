@@ -14,6 +14,7 @@ public class App {
 		System.out.println();//er
 		//다시
 		System.out.println("테스트.12:55");
+		System.out.println("테스트.12:58");
 
 	}
 }
