@@ -12,6 +12,8 @@ public class App {
     System.out.println("미니프로젝트 연습");
     System.out.println("미니 연습");
     System.out.println("테스트.12:55");
+    System.out.println("테스트.12:58");
+    System.out.println("이승혁13:05");
 
   }
 }
