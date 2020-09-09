@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import mini.project.domain.Handphone;
 import mini.project.util.Prompt;
 
-public class HandphoneHandler {
+public class HandPhoneHandler {
 
   ArrayList phoneList = new ArrayList();
+
   public void add() {
     System.out.println("[연락처 등록]");
 

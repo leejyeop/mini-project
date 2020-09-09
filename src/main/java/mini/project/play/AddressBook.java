@@ -1,13 +1,13 @@
 package mini.project.play;
 
-import mini.project.handler.HandphoneHandler;
+import mini.project.handler.HandPhoneHandler;
 import mini.project.handler.HomeHandler;
 import mini.project.util.Prompt;
 public class AddressBook{
 
   public static void main(String[] args) {
     System.out.println("연락처");
-    HandphoneHandler handphoneHandler = new HandphoneHandler();
+    HandPhoneHandler handphoneHandler = new HandPhoneHandler();
     HomeHandler homeHandler = new HomeHandler(handphoneHandler);
 
 

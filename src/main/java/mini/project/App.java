@@ -3,7 +3,7 @@
  */
 package mini.project;
 
-import mini.project.handler.HandphoneHandler;
+import mini.project.handler.HandPhoneHandler;
 import mini.project.handler.HomeHandler;
 import mini.project.util.Prompt;
 
@@ -16,7 +16,7 @@ public class App{
 
         switch (command) {
           case "/handphone/add/":
-            HandphoneHandler.add();
+            HandPhoneHandler.add();
             break;
           case "/handphone/list":
             HandPhoneHandler.list();
