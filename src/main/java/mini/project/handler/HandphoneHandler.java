@@ -12,10 +12,12 @@ public class HandphoneHandler {
 		System.out.println("[연락처 등록]");
 
 		Handphone handphone = new Handphone();
+		handphone.setNo(Prompt.inputString("번호? "));
 		handphone.setName(Prompt.inputString("이름? "));
 		handphone.setTel(Prompt.inputString("전화? "));
 		handphone.setBirthday(Prompt.inputString("생일? "));
 		handphone.setMemo(Prompt.inputString("메모? "));
+
 
 		phoneList.add(handphone);
 		System.out.println("[연락처를 등록했습니다]");
@@ -30,7 +32,8 @@ public class HandphoneHandler {
 
 		for (Object obj : handphones) {
 			Handphone handphone = (Handphone) obj;
-			System.out.printf("[이름 : %s, 전화번호 : %s, 생일 : %s, 메 모 : %s]\n",
+			System.out.printf("[번호: %s, 이름 : %s, 전화번호 : %s, 생일 : %s, 메 모 : %s]\n",
+					handphone.getNo(),
 					handphone.getName(),
 					handphone.getTel(),
 					handphone.getBirthday(),

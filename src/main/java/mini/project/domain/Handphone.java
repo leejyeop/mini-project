@@ -1,10 +1,17 @@
 package mini.project.domain;
 
 public class Handphone {
+	private String no;
 	private String name;
 	private String tel;
 	private String birthday;
 	private String memo;
+	public String setNo(String no) {
+		return no;
+	}
+	public String getNo() {
+		this.no = no;
+	}
 	public String getName() {
 		return name;
 	}
