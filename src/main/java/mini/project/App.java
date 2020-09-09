@@ -12,5 +12,6 @@ public class App {
     System.out.println("미니프로젝트 연습");
     System.out.println("미니 연습");
     System.out.println();
+    //
   }
 }
