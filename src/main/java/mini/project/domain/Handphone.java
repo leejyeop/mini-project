@@ -6,10 +6,11 @@ public class Handphone {
 	private String tel;
 	private String birthday;
 	private String memo;
-	public String setNo(String no) {
+
+	public String getNo() {
 		return no;
 	}
-	public String getNo() {
+	public void setNo(String no) {
 		this.no = no;
 	}
 	public String getName() {

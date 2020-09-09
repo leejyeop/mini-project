@@ -21,8 +21,12 @@ public class App{
 				switch (command) {
 				case "/handphone/add": handphonehandler.add(); break;
 				case "/handphone/list": handphonehandler.list(); break;
+				case "/handphone/update": handphonehandler.update(); break;
+				case "/handphone/delete": handphonehandler.delete(); break;
 				case "/home/add": homehandler.add(); break;
 				case "/home/list": homehandler.list(); break;
+				case "/home/update": homehandler.update(); break;
+				case "/home/delete": homehandler.delete(); break;
 				case "quit":
 				case "exit":
 					System.out.println("안녕!");
