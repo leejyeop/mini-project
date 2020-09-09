@@ -5,7 +5,7 @@ package mini.project;
 
 public class App {
   public String getGreeting() {
-    return "Hello world";
+    return "Hello world 가나다라마바사222.123";
   }
 
   public static void main(String[] args) {
@@ -13,5 +13,10 @@ public class App {
     System.out.println("흠... 점심 뭐먹지");
     System.out.println("이승혁13:09");
     System.out.println("");
+    System.out.println("미니프로젝트 연습");
+    System.out.println("미니 연습");
+
+    System.out.println("가나다라마바사");
+
   }
 }
