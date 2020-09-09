@@ -13,5 +13,7 @@ public class App {
 		System.out.println("미니 연습");
 		System.out.println();//er
 		//다시
+		System.out.println("테스트.12:55");
+
 	}
 }
