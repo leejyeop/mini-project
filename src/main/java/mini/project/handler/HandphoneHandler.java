@@ -1,6 +1,5 @@
 package mini.project.handler;
 
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 
 import mini.project.domain.Handphone;
@@ -124,13 +123,13 @@ public class HandphoneHandler {
 			System.out.println("회원 삭제를 취소하였습니다.");
 			return;
 		}
-		memberList.remove(index);
+		phoneList.remove(index);
 		System.out.println("회원을 삭제하였습니다.");
 	}
 	private int indexOf(int no) {
-		for (int i = 0; i < List.size(); i++) {
-			Member member = memberList.get(i);
-			if (member.getNo() == no) {
+		for (int i = 0; i < phoneList.size(); i++) {
+			Handphone handphone = phoneList.get(i);
+			if (handphone.getNo() == no) {
 				return i;
 			}
 		}
