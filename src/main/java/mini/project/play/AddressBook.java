@@ -1,24 +1,27 @@
 package mini.project.play;
 
+import mini.project.handler.HandphoneHandler;
+import mini.project.handler.HomeHandler;
 import mini.project.util.Prompt;
-
-public class AddressBook {
-  static final int LENGTH = 100;
-  static String name[] = new String[LENGTH];
-  static String phoneNumber[] = new String[LENGTH];
-  static String birthday[] = new String[LENGTH];
-  static String memo[] = new String[LENGTH];
-  static int size = 0;
+public class AddressBook{
 
   public static void main(String[] args) {
     System.out.println("연락처");
+    HandphoneHandler handphoneHandler = new HandphoneHandler();
+    HomeHandler homeHandler = new HomeHandler(handphoneHandler);
+
+
     loop :
       while(true) {
-        String command = Prompt.inputString("명령 => ");
+        String command = Prompt.inputString("명령 => (/phone/~, /home/~)\n");
         switch(command) {
-          case "/phone/add" : addPhone();
+          case "/phone/add" : handphoneHandler.add();
           break;
-          case "/phone/list" : listPhone();
+          case "/phone/list" : handphoneHandler.list();
+          break;
+          case "/home/add" : homeHandler.add();
+          break;
+          case "/home/list" : homeHandler.list();
           break;
           case "quit" : break loop;
           default : System.out.println("맞는 명령을 입력하세요.");
@@ -26,21 +29,6 @@ public class AddressBook {
       }
     Prompt.close();
   }
-
-  static void addPhone() {
-    System.out.println("[새로운 연락처 등록]");
-    name[size] = Prompt.inputString("이름? ");
-    phoneNumber[size] = Prompt.inputString("전화번호? ");
-    birthday[size] = Prompt.inputString("생일? ");
-    memo[size] = Prompt.inputString("메 모 ");
-    size++;
-  }
-  static void listPhone() {
-    for (int i = 0; i < size; i++) {
-      System.out.printf("이름 -> %s\n전화번호 -> %s\n생일 -> %s\n메모 -> %s\n--------------------\n",
-          name[i], phoneNumber[i],birthday[i], memo[i]);
-    }
-  }
-
 }
+
 
