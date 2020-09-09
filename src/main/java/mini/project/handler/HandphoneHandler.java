@@ -1,12 +1,16 @@
 package mini.project.handler;
 
-import java.util.ArrayList;
+import java.util.AbstractList;
 import mini.project.domain.Handphone;
 import mini.project.util.Prompt;
 
-public class HandPhoneHandler {
+public class HandphoneHandler {
 
-  ArrayList phoneList = new ArrayList();
+  AbstractList<Handphone> handphoneList;
+
+  public HandphoneHandler(AbstractList<Handphone> list) {
+    this.handphoneList = list;
+  }
 
   public void add() {
     System.out.println("[연락처 등록]");
@@ -17,7 +21,7 @@ public class HandPhoneHandler {
     handphone.setBirthday(Prompt.inputString("생일? "));
     handphone.setMemo(Prompt.inputString("메모? "));
 
-    phoneList.add(handphone);
+    handphoneList.add(handphone);
     System.out.println("[연락처를 등록했습니다]");
   }
 

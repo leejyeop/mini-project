@@ -7,9 +7,9 @@ import mini.project.util.Prompt;
 public class HomeHandler {
 
   ArrayList homeList = new ArrayList();
-  HandPhoneHandler handphoneHandler;
+  HandphoneHandler handphoneHandler;
 
-  public HomeHandler(HandPhoneHandler handphoneHandler) {
+  public HomeHandler(HandphoneHandler handphoneHandler) {
     this.handphoneHandler = handphoneHandler;
   }
   public void add() {
