@@ -1,6 +1,6 @@
 package mini.project.util;
 
-import java.sql.Date;
+
 import java.util.Scanner;
 
 //사용자의 입력을 받는 클래스
@@ -17,9 +17,7 @@ public class Prompt {
 		return Integer.parseInt(inputString(title));
 	}
 
-	public static Date inputDate(String title) {
-		return Date.valueOf(inputString(title));
-	}
+
 
 	// 프롬프트의 사용이 모두 끝났으면
 	// 이 메서드를 호출하여 System.in 입력 스트림 자원을 해제하도록 한다.

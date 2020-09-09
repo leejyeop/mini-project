@@ -14,8 +14,9 @@ public class HomeHandler {
 		System.out.println("[프로젝트 등록]");
 
 		Home home = new Home();
-		home.address = Prompt.inputString("번호? ");
-		home.tel = Prompt.inputString("팀원? ");
+		home.address = Prompt.inputString("주소? ");
+
+		home.tel = Prompt.inputString("전화번호? ");
 
 		list[size++] = home;
 	}
@@ -28,7 +29,9 @@ public class HomeHandler {
 			System.out.printf(" %s, %s",
 					home.address, 
 					home.tel); 
+			System.out.println();
 		}
+
 	}
 }
 

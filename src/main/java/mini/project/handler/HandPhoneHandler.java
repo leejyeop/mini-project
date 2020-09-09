@@ -36,6 +36,7 @@ public class HandPhoneHandler {
 					handphone.birthday, 
 					handphone.memo 
 					);
+			System.out.println();
 		}
 	}
 	public static HandPhone findByName(String name) {
