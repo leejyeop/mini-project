@@ -1,6 +1,7 @@
-package mini.project.domain;
+package mini.project.handler;
 
 import java.util.ArrayList;
+import mini.project.domain.Handphone;
 import mini.project.util.Prompt;
 
 public class HandphoneHandler {
