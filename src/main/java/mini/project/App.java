@@ -4,12 +4,11 @@
 package mini.project;
 
 public class App {
-	public String getGreeting() {
-		return "Hello world.";
-	}
+  public String getGreeting() {
+    return "Hello world.";
+  }
 
-	public static void main(String[] args) {
-		System.out.println(new App().getGreeting());
-		System.out.println("이종엽");
-	}
+  public static void main(String[] args) {
+    System.out.println("미니프로젝트 연습");
+  }
 }
