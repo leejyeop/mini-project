@@ -1,7 +1,6 @@
-package mini.project.handler;
+package mini.project.domain;
 
 import java.util.ArrayList;
-import mini.project.domain.Handphone;
 import mini.project.util.Prompt;
 
 public class HandphoneHandler {
@@ -20,9 +19,12 @@ public class HandphoneHandler {
     System.out.println("[연락처를 등록했습니다]");
   }
 
+
+
   public void list() {
     System.out.println("[연락처 목록]");
     Object[] handphones = phoneList.toArray();
+
 
     for (Object obj : handphones) {
       Handphone handphone = (Handphone) obj;

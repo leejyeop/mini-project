@@ -3,9 +3,41 @@
  */
 package mini.project;
 
+import mini.project.handler.HandPhoneHandler;
+import mini.project.handler.HomeHandler;
+import mini.project.util.Prompt;
+
 public class App{
 
 	public static void main(String[] args) {
+		loop:
+			while (true) {
+				String command = Prompt.inputString("명령> ");
 
+				switch (command) {
+				case "/handphone/add/":
+					HandPhoneHandler.add();
+					break;
+				case "/handphone/list":
+					HandPhoneHandler.list();
+					break;
+				case "/home/add":
+					HomeHandler.add();
+					break;
+				case "/home/list":
+					HomeHandler.list();
+					break;
+				case "quit":
+				case "exit":
+					System.out.println("안녕!");
+					break loop;
+				default:
+					System.out.println("실행할 수 없는 명령입니다.");
+				}
+				System.out.println(); // 이전 명령의 실행을 구분하기 위해 빈 줄 출력
+			}
+
+	Prompt.close();
 	}
 }
+
