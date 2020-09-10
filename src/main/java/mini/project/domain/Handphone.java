@@ -1,10 +1,12 @@
 package mini.project.domain;
 
+import java.sql.Date;
+
 public class Handphone {
   private int no;
   private String name;
   private String tel;
-  private String birthday;
+  private Date birthday;
   private String memo;
 
   public int getNo() {
@@ -26,10 +28,10 @@ public class Handphone {
   public void setTel(String tel) {
     this.tel = tel;
   }
-  public String getBirthday() {
+  public Date getBirthday() {
     return birthday;
   }
-  public void setBirthday(String birthday) {
+  public void setBirthday(Date birthday) {
     this.birthday = birthday;
   }
   public String getMemo() {

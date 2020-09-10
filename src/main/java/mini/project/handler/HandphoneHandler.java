@@ -1,5 +1,6 @@
 package mini.project.handler;
 
+import java.sql.Date;
 import java.util.AbstractList;
 import java.util.Iterator;
 import mini.project.domain.Handphone;
@@ -19,7 +20,7 @@ public class HandphoneHandler {
     handphone.setNo(Prompt.inputInt("번호? "));
     handphone.setName(Prompt.inputString("이름? "));
     handphone.setTel(Prompt.inputString("전화? "));
-    handphone.setBirthday(Prompt.inputString("생일? "));
+    handphone.setBirthday(Prompt.inputDate("생일? "));
     handphone.setMemo(Prompt.inputString("메모? "));
 
     handphoneList.add(handphone);
@@ -76,7 +77,7 @@ public class HandphoneHandler {
           String.format("이름(%s)? ", phone.getName()));
       String tel  = Prompt.inputString(
           String.format("전화번호(%s)? ", phone.getTel()));
-      String birthday = Prompt.inputString(
+      Date birthday = Prompt.inputDate(
           String.format("생일(%s)? ", phone.getBirthday()));
       String memo = Prompt.inputString(
           String.format("메모(%s)? ", phone.getMemo()));

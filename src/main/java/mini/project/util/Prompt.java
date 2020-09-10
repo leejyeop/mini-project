@@ -1,6 +1,7 @@
 package mini.project.util;
 
 
+import java.sql.Date;
 import java.util.Scanner;
 
 public class Prompt {
@@ -15,6 +16,9 @@ public class Prompt {
     return Integer.parseInt(inputString(title));
   }
 
+  public static Date inputDate(String title) {
+    return Date.valueOf(inputString(title));
+  }
   public static void close() {
     keyboardScan.close();
   }
