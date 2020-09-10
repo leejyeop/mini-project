@@ -93,7 +93,7 @@ public class HandphoneHandler {
     }
   }
   public void delete() {
-    System.out.println("[회원정보 변경]");
+    System.out.println("[회원정보 삭제]");
     int no = Prompt.inputInt("번호?");
     int index = indexOf(no);
     if (index == -1) {
