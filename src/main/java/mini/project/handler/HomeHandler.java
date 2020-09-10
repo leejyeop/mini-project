@@ -37,6 +37,8 @@ public class HomeHandler {
 
     homeList.add(home);
     System.out.println("주소를 등록했습니다.");
+    System.out.println("-------------------------------");
+    System.out.println();
   }
   public void list() {
     System.out.println("[주소록]");
@@ -46,6 +48,8 @@ public class HomeHandler {
       System.out.printf("[%s(%d) => , 주소 : %s, 집전화 : %s]\n",
           home.getName(),home.getNo(), home.getAddress(),home.getTel());
     }
+    System.out.println("-------------------------------");
+    System.out.println();
   }
   public void detail () {
     System.out.println("[집주소 상세조회]");
@@ -59,6 +63,8 @@ public class HomeHandler {
       System.out.printf("주소 : %s\n", home.getAddress());
       System.out.printf("집전화 : %s\n", home.getTel());
     }
+    System.out.println("-------------------------------");
+    System.out.println();
   }
   public void update() {
     System.out.println("[주소록 변경]");
@@ -83,6 +89,8 @@ public class HomeHandler {
         System.out.println("주소록 변경을 취소하였습니다.");
       }
     }
+    System.out.println("-------------------------------");
+    System.out.println();
   }
   public void delete() {
     System.out.println("[주소 삭제]");
@@ -99,6 +107,8 @@ public class HomeHandler {
         System.out.println("삭제를 취소하였습니다.");
       }
     }
+    System.out.println("-------------------------------");
+    System.out.println();
   }
   private int indexOf(int no) {
     for(int i = 0; i < homeList.size(); i++) {

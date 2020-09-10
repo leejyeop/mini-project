@@ -26,6 +26,7 @@ public class HandphoneHandler {
     handphoneList.add(handphone);
     System.out.println("[연락처를 등록했습니다]");
     System.out.println("-------------------------------");
+    System.out.println();
   }
 
   public void list() {
@@ -41,6 +42,7 @@ public class HandphoneHandler {
           handphone.getMemo()
           );
       System.out.println("-------------------------------");
+      System.out.println();
     }
   }
   public Handphone findByName(String name) {
@@ -74,6 +76,7 @@ public class HandphoneHandler {
 
       System.out.printf("메모 : %s\n", phone.getMemo());
       System.out.println("-------------------------------");
+      System.out.println();
     }
   }
   public void update() {
@@ -106,6 +109,7 @@ public class HandphoneHandler {
       }
     }
     System.out.println("-------------------------------");
+    System.out.println();
   }
   public void delete() {
     System.out.println("[회원정보 삭제]");
@@ -123,6 +127,7 @@ public class HandphoneHandler {
       }
     }
     System.out.println("-------------------------------");
+    System.out.println();
   }
   private int indexOf(int no) {
     for(int i = 0; i < handphoneList.size(); i++) {
