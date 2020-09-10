@@ -8,7 +8,14 @@ public class Handphone {
   private String tel;
   private Date birthday;
   private String memo;
+  private Date registeredDate;
 
+  public Date getBirthday() {
+    return birthday;
+  }
+  public void setBirthday(Date birthday) {
+    this.birthday = birthday;
+  }
   public int getNo() {
     return no;
   }
@@ -28,16 +35,17 @@ public class Handphone {
   public void setTel(String tel) {
     this.tel = tel;
   }
-  public Date getBirthday() {
-    return birthday;
-  }
-  public void setBirthday(Date birthday) {
-    this.birthday = birthday;
-  }
+
   public String getMemo() {
     return memo;
   }
   public void setMemo(String memo) {
     this.memo = memo;
+  }
+  public Date getRegisteredDate() {
+    return registeredDate;
+  }
+  public void setRegisteredDate(Date registeredDate) {
+    this.registeredDate = registeredDate;
   }
 }

@@ -25,12 +25,12 @@ public class HandphoneHandler {
 
     handphoneList.add(handphone);
     System.out.println("[연락처를 등록했습니다]");
+    System.out.println("-------------------------------");
   }
 
   public void list() {
     System.out.println("[연락처 목록]");
     Iterator<Handphone> iterator = handphoneList.iterator();
-
     while(iterator.hasNext()) {
       Handphone handphone = iterator.next();
       System.out.printf("[번호: %s, 이름 : %s, 전화번호 : %s, 생일 : %s, 메모 : %s]\n",
@@ -40,6 +40,7 @@ public class HandphoneHandler {
           handphone.getBirthday(),
           handphone.getMemo()
           );
+      System.out.println("-------------------------------");
     }
   }
   public Handphone findByName(String name) {
@@ -53,6 +54,7 @@ public class HandphoneHandler {
     return null;
   }
   public void detail () {
+
     System.out.println("[연락처 상세조회]");
     String name = Prompt.inputString("이름?");
     Handphone phone = findByName(name);
@@ -62,8 +64,16 @@ public class HandphoneHandler {
       System.out.printf("번호 : %s\n", phone.getNo());
       System.out.printf("이름 : %s\n", phone.getName());
       System.out.printf("전화번호 : %s\n", phone.getTel());
-      System.out.printf("생일 : %s\n", phone.getBirthday());
+
+      Date date2 = new java.sql.Date(System.currentTimeMillis());
+      Date FirstDate = phone.getBirthday();
+      long calDate = date2.getTime() - FirstDate.getTime();
+      long calDateDays = calDate / ( 24*60*60*1000);
+      calDateDays = Math.abs(calDateDays);
+      System.out.printf("태어난지 %s일째\n", calDateDays);
+
       System.out.printf("메모 : %s\n", phone.getMemo());
+      System.out.println("-------------------------------");
     }
   }
   public void update() {
@@ -73,16 +83,19 @@ public class HandphoneHandler {
     if (phone == null) {
       System.out.println("그 이름을 가진 연락처가 없습니다.");
     } else {
+      int no = Prompt.inputInt(
+          String.format("단축번호(%s) =>? ", phone.getNo()));
       String name = Prompt.inputString(
-          String.format("이름(%s)? ", phone.getName()));
+          String.format("이름(%s) =>? ", phone.getName()));
       String tel  = Prompt.inputString(
-          String.format("전화번호(%s)? ", phone.getTel()));
+          String.format("전화번호(%s) =>? ", phone.getTel()));
       Date birthday = Prompt.inputDate(
-          String.format("생일(%s)? ", phone.getBirthday()));
+          String.format("생일(%s) =>? ", phone.getBirthday()));
       String memo = Prompt.inputString(
-          String.format("메모(%s)? ", phone.getMemo()));
+          String.format("메모(%s) =>? ", phone.getMemo()));
       String response = Prompt.inputString("정말 변경하시겠습니까 ? (y/N)");
       if (response.equalsIgnoreCase("y")) {
+        phone.setNo(no);
         phone.setName(name);
         phone.setTel(tel);
         phone.setBirthday(birthday);
@@ -92,6 +105,7 @@ public class HandphoneHandler {
         System.out.println("회원정보 변경을 취소하였습니다.");
       }
     }
+    System.out.println("-------------------------------");
   }
   public void delete() {
     System.out.println("[회원정보 삭제]");
@@ -108,6 +122,7 @@ public class HandphoneHandler {
         System.out.println("삭제를 취소하였습니다.");
       }
     }
+    System.out.println("-------------------------------");
   }
   private int indexOf(int no) {
     for(int i = 0; i < handphoneList.size(); i++) {
