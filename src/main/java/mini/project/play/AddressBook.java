@@ -21,27 +21,29 @@ public class AddressBook{
 
     loop :
       while(true) {
-        String command = Prompt.inputString("명령 (/phone/~, /home/~)\n =>");
+        String command = Prompt.inputString("1.연락처 등록, 2. 연락처 목록, 3.연락처 상세조회, 4.연락처 수정, 5.연락처 삭제\n"
+            + "6.주소 등록,   7. 주소 목록,   8. 주소 상세조회,  9. 주소 수정,  10. 주소 삭제\n"
+            + "나가기(quit) =>");
         switch(command) {
-          case "/phone/add" : handphoneHandler.add();
+          case "1" : handphoneHandler.add();
           break;
-          case "/phone/list" : handphoneHandler.list();
+          case "2" : handphoneHandler.list();
           break;
-          case "/phone/detail" : handphoneHandler.detail();
+          case "3" : handphoneHandler.detail();
           break;
-          case "/phone/update" : handphoneHandler.update();
+          case "4" : handphoneHandler.update();
           break;
-          case "/phone/delete" : handphoneHandler.delete();
+          case "5" : handphoneHandler.delete();
           break;
-          case "/home/add" : homeHandler.add();
+          case "6" : homeHandler.add();
           break;
-          case "/home/list" : homeHandler.list();
+          case "7" : homeHandler.list();
           break;
-          case "/home/detail" : homeHandler.detail();
+          case "8" : homeHandler.detail();
           break;
-          case "/home/update" : homeHandler.update();
+          case "9" : homeHandler.update();
           break;
-          case "/home/delete" : homeHandler.delete();
+          case "10" : homeHandler.delete();
           break;
           case "quit" : break loop;
           default : System.out.println("맞는 명령을 입력하세요.");
